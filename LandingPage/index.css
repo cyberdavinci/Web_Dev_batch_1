@@ -1,0 +1,250 @@
+      /* Global stylings */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(40, 46, 42);
+      }
+      li {
+        list-style-type: none;
+      }
+      img {
+        width: 100%;
+      }
+      .checkbox-nav {
+        display: none;
+      }
+      label{
+        display: none;
+      }
+
+      /* HEADER STYLINGS */
+      header {
+        /* background-color: #8dddb1; */
+        background-color: #d4e9df;
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+      }
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        /* color: #4cca94; */
+        /* background-color: seagreen; */
+        transition: 0.4s ease;
+        /* flex-direction: ; */
+      }
+      nav ul li a {
+        color: #09ca77;
+        font-weight: bold;
+      }
+
+      nav .logo {
+        width: 100%;
+        max-width: 150px;
+      }
+      nav ul {
+        display: flex;
+        gap: 10px;
+      }
+      nav ul,
+      .sign {
+        padding-bottom: 0.7rem;
+      }
+      .sign a button {
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        background-color: #ffffff;
+        font-weight: 800;
+        padding: 0.4rem 0.8rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .sign-mobile {
+        display: none;
+      }
+
+      header .banner {
+        /* margin-top: auto 0; */
+        height: 100%;
+        display: flex;
+        margin-top: -100px;
+
+        padding: 3rem;
+        align-items: center;
+        /* background-color: #ffffff; */
+      }
+      .banner .content,
+      .banner_img {
+        width: 50%;
+      }
+      .banner .content h1 {
+        color: #0f0b33;
+        text-transform: uppercase;
+        font-size: 60px;
+      }
+      .content h1 span {
+        color: #f9bf16;
+      }
+      .content p{
+        text-align: justify;
+      }
+      #slogan-cards {
+        /* display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; */
+        padding: 1rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 10px;
+        /* margin: auto auto; */
+        /* background-color: #131314; */
+        /* align-content: center; */
+        
+      }
+      #slogan-cards .card {
+        z-index: 10;
+        margin: 0 auto;
+        background-color: #0f0b33;
+        color: #fff;
+        max-width: 300px;
+        height: 270px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 30px;
+        margin-top: -19%;
+        gap: 20px;
+        padding: 10px;
+      }
+      .card i{
+        background-color: #3CC47B;
+        font-size: 28px;
+        padding: .8rem;
+        border-radius: 50%;
+      }
+      
+      @media (max-width: 768px) {
+        /* label .fa{
+            display:block;
+          } */
+
+
+          label {
+            float: left;
+            margin: 0.5rem 2rem;
+            cursor: pointer;
+            transition: 0.4s ease;
+            position: absolute;
+            display: block;
+          }
+          /* label .fa{
+            display:none;
+          } */
+          label .fa-times {
+            display: none;
+          }
+    
+          input.checkbox-nav:checked ~ .toggle-nav {
+            left: 5%;
+          }
+          input.checkbox-nav:checked ~ label .fa-bars {
+            display: none;
+          }
+          input.checkbox-nav:checked ~ label .fa-times {
+            display: block;
+          }
+
+
+        header {
+          /* background-color: aliceblue; */
+        }
+        header nav {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: unset;
+          background-color: #131314;
+          color: #4cca94;
+          height: 100%;
+
+          opacity: 0;
+          width: 0;
+          transform: translateX(-600px);
+        }
+        input.checkbox-nav:checked ~ nav {
+          /* display: block; */
+          opacity: 1;
+          width: 200px;
+          transform: translateX(0);
+        }
+        input.checkbox-nav:checked ~ .toggle-nav {
+          left: 180px;
+        }
+
+        nav ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin: 10px 15px;
+        }
+        nav ul li a {
+          color: #4cca94;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+        .sign {
+          margin: 10px 15px;
+        }
+        /* .sign a {
+          width: 100px;
+          height: 100px;
+        } */
+
+        .sign-mobile {
+          display: block;
+          float: right;
+          margin: 0.5rem 2rem;
+        }
+
+
+        header .banner{
+            flex-direction: column;
+            margin-top: -150px;
+            /* margin-top: auto; */
+            
+        }
+        .banner .content,
+        .banner_img{
+            width: 100%;
+        }
+        #slogan-cards{
+            gap: 5px;
+            flex-direction: column;
+        }
+        #slogan-cards .card{
+            margin-top: 10px;
+            max-width: 270px;
+        }
+      }
