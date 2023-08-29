@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+}
+section {
+  background-color: whitesmoke;
+  /* font-size: 50px; */
+  /* background-color: #111927; */
+
+  width: 95%;
+  /* height: 780px; */
+  font-family: "Lucida Sans";
+  margin: 20px auto;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+input {
+  display: none;
+}
+nav {
+  width: 5%;
+  background-color: #3f3d56;
+  /* width: 220px; */
+  height: 100%;
+  float: left;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+}
+
+ul {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+ul li {
+  list-style: none;
+}
+nav ul li {
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  /* background-color: blue;
+  margin-top: 10px; */
+}
+li a {
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li a span {
+  display: none;
+}
+main {
+  width: 95%;
+  height: 100%;
+  /* background-color: #333; */
+  float: right;
+  padding: 10px 30px;
+}
+main header {
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: #333; */
+}
+main header a {
+  padding: 0 5px;
+  margin: 0 15px;
+}
+.main-content {
+  width: 100%;
+  height: 80%;
+  margin: auto;
+  /* float: right; */
+}
+.main-content .banner {
+  display: flex;
+  align-items: center;
+  /* background-color: #333; */
+  margin-top: 20px;
+  /* flex-direction: column; */
+}
+.main-content .banner .content,
+.main-content .banner img {
+  width: 50%;
+}
+.main-content .titles h1 {
+  font-size: 80px;
+}
+.main-content .titles h3,
+.main-content .titles h1 {
+  padding: 2px 0 2px 50px;
+  color: #333;
+}
+.main-content .banner p {
+  line-height: 27px;
+  padding: 2px 0 2px 50px;
+  text-align: justify;
+}
+.main-content > p {
+  text-align: center;
+}
+.main-content .projects {
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; */
+}
+.projects ul {
+  /* background-color: black; */
+
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 10px;
+}
+.projects ul li {
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  border: #333 1px solid;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  background-color: rgba(0, 218, 182, 0.07);
+  border: 0;
+  /* glass effec */
+  /* backdrop-filter: blur(100px), saturate(180%);
+  background-color: rgba(248, 248, 248, 0.541); */
+}
+.projects li h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+li .stacks {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-size: 30px;
+}
+.btns {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+}
+.projects .btns a {
+  width: 100%;
+}
+.projects .btns button {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  cursor: pointer;
+}
+.btns button:hover {
+  background-color: #3f3d56;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+/* ul li p {
+  background-color: #333;
+} */
+.toggle-nav {
+  position: absolute;
+  top: 10px;
+  left: 6%;
+}
+label .fa-times {
+  display: none;
+}
+input.checkbox-nav:checked ~ nav {
+  width: 20%;
+}
+input.checkbox-nav:checked ~ label .fa-times {
+  /* background-color: black; */
+  display: inline-block;
+}
+input.checkbox-nav:checked ~ label .fa-bars {
+  /* background-color: black; */
+  display: none;
+}
+input.checkbox-nav:checked ~ .toggle-nav {
+  /* background-color: black; */
+  left: 21%;
+}
+input.checkbox-nav:checked ~ nav li span {
+  /* background-color: black; */
+  display: inline-block;
+}
