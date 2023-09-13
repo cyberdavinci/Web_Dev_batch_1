@@ -18,8 +18,9 @@ section {
   position: relative;
   border-radius: 14px;
   overflow: hidden;
+  transition: all 0.4s ease;
 }
-input {
+input[type="checkbox"] {
   display: none;
 }
 nav {
@@ -28,7 +29,7 @@ nav {
   /* width: 220px; */
   height: 100%;
   float: left;
-  transition: 0.3s ease-in-out;
+  transition: all 0.4s ease;
   position: absolute;
 }
 
@@ -44,12 +45,13 @@ nav ul li {
   height: 60px;
   line-height: 60px;
   width: 100%;
+  color: #fff;
   /* background-color: blue;
   margin-top: 10px; */
 }
-li a {
+a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 nav ul li a span {
   display: none;
@@ -70,6 +72,7 @@ main header a {
   padding: 0 5px;
   margin: 0 15px;
 }
+
 .main-content {
   width: 100%;
   height: 80%;
@@ -129,15 +132,12 @@ main header a {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  /* align-items: center; */
   border-radius: 10px;
-  /* background-color: #fff; */
+  /* glass effect */
   background-color: rgba(0, 218, 182, 0.07);
-  /* background-color: rgba(0, 218, 182, 0.07); */
+  backdrop-filter: blur(25px) saturate(182%);
+  -webkit-backdrop-filter: blur(25px) saturate(182%);
   border: 0;
-  /* glass effec */
-  /* backdrop-filter: blur(100px), saturate(180%);
-  background-color: rgba(248, 248, 248, 0.541); */
 }
 .projects li h3 {
   text-transform: uppercase;
@@ -197,4 +197,107 @@ input.checkbox-nav:checked ~ .toggle-nav {
 input.checkbox-nav:checked ~ nav li span {
   /* background-color: black; */
   display: inline-block;
+}
+label .fa-solid {
+  display: none;
+
+  /* transition: 0.5s; */
+}
+/* Css for changing dark and light theme */
+input.checkbox-theme:checked ~ label .fa-solid {
+  display: block;
+  /* opacity: 1;
+  width: 20px; */
+  /* transition: 0.5s; */
+}
+input.checkbox-theme:checked ~ label .fa-regular {
+  display: none;
+}
+input.checkbox-theme:checked ~ section {
+  /* display: none; */
+  /* background-color: #2f2e41; */
+  background-color: #111927;
+
+  color: whitesmoke;
+}
+input.checkbox-theme:checked ~ section h1 {
+  /* display: none; */
+  color: #fff;
+}
+input.checkbox-theme:checked ~ section h3 {
+  /* display: none; */
+  color: #00bfa6;
+}
+input.checkbox-theme:checked ~ section p {
+  /* display: none; */
+  color: gainsboro;
+}
+
+label .fa-moon {
+  font-size: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.contact {
+  display: flex;
+  align-items: center;
+}
+.img-container,
+form {
+  flex: 1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #179961;
+  outline: none;
+  /* border: 0 0 1px 0 solid; */
+  /* border-top: 0;
+  border-left: 0;
+  border-right: 0; */
+  font-size: 18px;
+  font-weight: bold;
+}
+.contact textarea {
+  resize: none;
+}
+.contact button {
+  width: 300px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.inputs {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  section {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  nav {
+    width: 0;
+    border-radius: 0;
+    z-index: 1;
+  }
+  input.checkbox-nav:checked ~ nav {
+    width: 220px;
+  }
+  .toggle-nav {
+    z-index: 50;
+  }
+  input.checkbox-nav:checked ~ .toggle-nav {
+    left: 230px;
+  }
 }

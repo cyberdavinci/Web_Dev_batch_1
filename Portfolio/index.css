@@ -19,7 +19,7 @@ section {
   transition: 0.3s;
   border-radius: 14px;
 }
-input {
+input[type="checkbox"] {
   display: none;
   width: 74px;
   height: 47px;
@@ -64,8 +64,6 @@ input.checkbox-theme:checked ~ label .fa-regular {
   transition: 0.5s;
 }
 input.checkbox-theme:checked ~ section {
-  /* display: none; */
-  /* background-color: #2f2e41; */
   background-color: #111927;
 
   transition: 0.3s;
@@ -199,6 +197,7 @@ header a.hire-btn-top {
   height: 90%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-between;
 }
@@ -323,18 +322,6 @@ input.checkbox-theme:checked ~ section .round-ball {
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-
-  /* backdrop filter */
-  backdrop-filter: blur(2px);
-  backdrop-filter: brightness(60%);
-  backdrop-filter: contrast(40%);
-  backdrop-filter: drop-shadow(4px 4px 10px blue);
-  backdrop-filter: grayscale(30%);
-  backdrop-filter: hue-rotate(120deg);
-  backdrop-filter: invert(70%);
-  backdrop-filter: opacity(20%);
-  backdrop-filter: sepia(90%);
-  backdrop-filter: saturate(80%);
 }
 .projects ul li h3 {
   font-weight: 900;
