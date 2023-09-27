@@ -38,13 +38,36 @@ let x = 10;
 let y = 4;
 let sum = x + y;
 
+if (x === 10) {
+  // pi
+}
+
 // try substraction,multiplication and division on your own
 // using dot notation to get the values of object person
-console.log(person.about);
+// console.log(person.about);
 // using scare notation to get the values of object person
-console.log(person["name"]);
+// console.log(person["name"]);
 // using index/scare notation to get the values of datas array
-console.log(data[2]);
+// console.log(data[2]);
 
-console.log(statement);
-console.log(statement2);
+// console.log(statement);
+// console.log(statement2);
+
+// ##################
+//  Conditional Statements
+//#################
+let is_cloudy = true;
+
+let myAge = 19;
+// if (!is_cloudy) {
+//   console.log("It will rain");
+// } else {
+//   console.log("It will not rain");
+// }
+if (myAge < 20) {
+  console.log("I am a teen");
+} else if (myAge > 19 && myAge < 45) {
+  console.log(" I am an Adult");
+} else {
+  console.log("I am old");
+}
