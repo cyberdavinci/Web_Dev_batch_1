@@ -217,6 +217,63 @@ header .banner {
   height: 160px;
   border-radius: 20px;
 }
+#testimonials {
+  padding-bottom: 30px;
+  overflow-x: hidden;
+}
+#testimonials ul {
+  display: flex;
+  gap: 10px;
+}
+#testimonials ul li {
+  width: 300px;
+  min-width: 200px;
+  /* height: 100px; */
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  text-align: justify;
+}
+.sign-form {
+  z-index: 48;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+.sign-form.active {
+  display: flex;
+}
+.sign-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  width: 400px;
+  height: 300px;
+  gap: 10px;
+  background-color: #0f0b33;
+  position: relative;
+}
+.sign-form form span {
+  color: orangered;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 @media (max-width: 1000px) {
   #slogan-cards .card {
     width: 250px;

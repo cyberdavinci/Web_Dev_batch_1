@@ -18,6 +18,16 @@
   </head>
   <body>
     <div class="main">
+      <!-- form for login -->
+      <div id="form" class="sign-form">
+        <h2>Login</h2>
+        <form>
+          <span id="closeForm">X</span>
+          <input type="text" placeholder="username" />
+          <input type="text" placeholder="password" />
+          <button>login</button>
+        </form>
+      </div>
       <!-- HEADER BEGINS HERE -->
 
       <header>
@@ -26,8 +36,9 @@
           <label for="open" class="toggle-nav"
             ><i class="fa fa-bars"></i><i class="fa fa-times"></i
           ></label>
+          <!-- Will only display on Mobile -->
           <div class="sign sign-mobile">
-            <a href=""><button>SIGN IN</button></a>
+            <a href="#"><button id="singIn">SIGN IN</button></a>
           </div>
           <nav>
             <div class="logo">
@@ -39,8 +50,11 @@
               <li><a href="#">Resources</a></li>
               <li><a href="#">Community</a></li>
             </ul>
+            <!-- will display on laptop and desktop -->
             <div class="sign">
-              <a href=""><button>SIGN IN</button></a>
+              <a href="#"
+                ><button id="singInBtn" class="singInBtn">SIGN IN</button></a
+              >
             </div>
           </nav>
         </div>
@@ -55,8 +69,14 @@
                 repudiandae eum recusandae.
               </p>
               <div class="hero-btns">
-                <a href=""><button class="btn-green">JOIN CLASS</button></a>
-                <a href=""><button>GET STARTED</button></a>
+                <a href="#"
+                  ><button class="btn-green" id="join-class-btn">
+                    JOIN CLASS
+                  </button></a
+                >
+                <a href="#"
+                  ><button onclick="doSomething()">GET STARTED</button></a
+                >
               </div>
             </div>
             <div class="banner_img">
@@ -187,7 +207,67 @@
       <!-- FEATURED SECTION BEGINS HERE -->
 
       <section id="membership"></section>
-      <section id="testimonials"></section>
+      <!-- TESTIMONIALS SECTIONS HERE -->
+      <section id="testimonials">
+        <ul>
+          <li class="active">
+            <h3>User 123</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 124</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 125</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 126</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 127</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 128</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 129</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+          <li>
+            <h3>User 130</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              similique.
+            </p>
+          </li>
+        </ul>
+      </section>
       <section id="pricing"></section>
 
       <footer></footer>

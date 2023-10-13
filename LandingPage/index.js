@@ -1,7 +1,7 @@
 // string
 var hisName = "name here";
 let myName = "Ebrima";
-// float/decima
+// float/decimal
 const pi = 3.142;
 // number/ int
 let age = 34;
@@ -19,7 +19,13 @@ const person = {
     email: "email@gmail.com",
   },
   isMarried: false,
+
+  displayDetail: (placeholder) => {
+    console.log(placeholder);
+  },
+  displayMore: function () {},
 };
+person.displayDetail("Hi therew");
 // Booleans
 // true and false
 
@@ -53,21 +59,76 @@ if (x === 10) {
 // console.log(statement);
 // console.log(statement2);
 
-// ##################
+// ###########################
 //  Conditional Statements
-//#################
-let is_cloudy = true;
+//############################
+let is_cloudy = "";
 
-let myAge = 19;
-// if (!is_cloudy) {
+let myAge = 65;
+
+// if (is_cloudy === true) {
 //   console.log("It will rain");
-// } else {
+// } else if (is_cloudy === false) {
 //   console.log("It will not rain");
+// } else {
+//   console.log("Let's go the beach!");
 // }
-if (myAge < 20) {
-  console.log("I am a teen");
-} else if (myAge > 19 && myAge < 45) {
-  console.log(" I am an Adult");
-} else {
-  console.log("I am old");
+
+// if (myAge < 20) {
+//   console.log("I am a teen");
+// } else if (myAge > 19 || myAge < 45) {
+//   console.log(" I am an Adult");
+// } else {
+//   console.log("I am old");
+// }
+// let counter = 10;
+
+// while (counter >= 1) {
+//   console.log(counter);
+//   counter = counter - 1;
+// counter+=1
+// counter --
+// }
+// for (let i = 0; i <= 10; i += 2) {
+//   console.log(`current number is ${i}`);
+// }
+
+function doAction() {
+  // for (; counter <= 10; counter += 2) {
+  //   console.log(`current number is ${counter}`);
+  // }
+  // signIn.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   console.log("I have been clicked!");
+  //   // alert("Button Clicked!");
+  // });
+  console.log("Hi there");
 }
+// doAction();
+// DOM ---> Document Object Model
+console.log(document);
+
+document.getElementById("join-class-btn").addEventListener("click", () => {
+  alert("join class form active");
+});
+
+function doSomething(value) {
+  console.log(value);
+}
+let loginForm = document.getElementById("form");
+let signIn = document.getElementById("singIn");
+let signIn2 = document.getElementById("singInBtn");
+let closeForm = document.getElementById("closeForm");
+// let signIn2 = document.getElementsByClassName("singInBtn");
+signIn2.addEventListener("click", (event) => {
+  event.preventDefault();
+  loginForm.classList.add("active");
+  // console.log(loginForm);
+});
+closeForm.addEventListener("click", (event) => {
+  event.preventDefault();
+  loginForm.classList.remove("active");
+  // console.log(loginForm);
+});
+// const logName = doSomething("Ebrima");
+// const logArrayOfElements = doSomething([12, "bhejhr"]);
